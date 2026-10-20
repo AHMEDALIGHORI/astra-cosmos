@@ -1,0 +1,4 @@
+import { Document } from '@/components/ui/Document';
+import { BRAND } from '@/lib/brand';
+export const metadata = { title: 'Privacy' };
+export default function PrivacyPage() { return <Document eyebrow="Legal · Privacy" title="A quiet record." ><p>{BRAND.name} treats astrology and numerology as interpretive practices. A date of birth entered into the chart is calculated in your browser and is never sent to our servers or stored by {BRAND.name}.</p><h2>Information we receive</h2><p>Enquiry details are sent only when you submit the consultation or course form. We use the information you choose to provide to reply to your request and arrange the service. When an enquiry webhook is configured, submitted details are forwarded to that service.</p><h2>Contact</h2><p>Questions about this policy can be sent to <a href={`mailto:${BRAND.email}`}>{BRAND.email}</a>.</p></Document>; }

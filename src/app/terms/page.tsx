@@ -1,0 +1,4 @@
+import { Document } from '@/components/ui/Document';
+import { BRAND } from '@/lib/brand';
+export const metadata = { title: 'Terms' };
+export default function TermsPage() { return <Document eyebrow="Legal · Terms" title="Read the fine print." ><p>{BRAND.name} offers educational and interpretive astrology and numerology content for reflection. Nothing on this site is a prediction or a substitute for professional advice.</p><h2>Using the site</h2><p>Birth dates entered into the chart are calculated locally in your browser. Consultation and course enquiries are sent only when you submit the form. Course and consultation availability is subject to confirmation by email.</p><h2>Questions</h2><p>Write to <a href={`mailto:${BRAND.email}`}>{BRAND.email}</a> if you need clarification before making an enquiry.</p></Document>; }

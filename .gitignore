@@ -1,0 +1,19 @@
+node_modules/
+.next/
+out/
+dist/
+coverage/
+*.tsbuildinfo
+next-env.d.ts
+
+# Local environment and logs
+.env*
+!.env.example
+*.log
+.DS_Store
+Thumbs.db
+
+# Local platform metadata
+.manus/
+manus-webdev.json
+public/manus-routes.json

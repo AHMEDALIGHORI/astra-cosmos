@@ -1,0 +1,5 @@
+import type { ChapterId, Phase } from './journey';
+export interface CosmicEventMap { sectionEnter: { id: ChapterId; index: number }; sectionExit: { id: ChapterId; index: number }; phaseChange: { phase: Phase }; planetPass: { name: string }; blackHoleEnter: { depth: number }; chartGenerated: { lifePath: number; sunSign: string }; consultationCTA: { source: string }; }
+export type CosmicEventName = keyof CosmicEventMap;
+class CosmicEvents { private handlers = new Map<CosmicEventName, Set<(payload: never) => void>>(); on<K extends CosmicEventName>(name: K, handler: (payload: CosmicEventMap[K]) => void) { const set = this.handlers.get(name) ?? new Set(); set.add(handler as (payload: never) => void); this.handlers.set(name, set); return () => set.delete(handler as (payload: never) => void); } emit<K extends CosmicEventName>(name: K, payload: CosmicEventMap[K]) { this.handlers.get(name)?.forEach((handler) => handler(payload as never)); if (typeof window !== 'undefined') window.dispatchEvent(new CustomEvent(`astra:${name}`, { detail: payload })); } }
+export const cosmicEvents = new CosmicEvents();

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="320" viewBox="0 0 960 320" role="img" aria-labelledby="title desc">
+  <title id="title">ASTRA — Your Journey Through the Cosmos</title>
+  <desc id="desc">A gold sun with slowly orbiting points in a dark starfield. Original README artwork.</desc>
+  <defs>
+    <radialGradient id="halo"><stop stop-color="#d9b77e" stop-opacity=".25"/><stop offset="1" stop-color="#050507" stop-opacity="0"/></radialGradient>
+    <radialGradient id="sun"><stop stop-color="#fff6e6"/><stop offset=".4" stop-color="#d9b77e"/><stop offset="1" stop-color="#c8502f"/></radialGradient>
+    <style>
+      .orbit { transform-origin:750px 160px; animation:orbit 24s linear infinite; }
+      .reverse { animation-direction:reverse; animation-duration:34s; }
+      .pulse { animation:pulse 4s ease-in-out infinite alternate; }
+      @keyframes orbit { to { transform:rotate(360deg); } }
+      @keyframes pulse { from { opacity:.4; } to { opacity:1; } }
+      @media (prefers-reduced-motion:reduce) { .orbit,.pulse { animation:none; } }
+    </style>
+  </defs>
+  <rect width="960" height="320" rx="16" fill="#050507"/>
+  <rect x=".5" y=".5" width="959" height="319" rx="16" fill="none" stroke="#25252b"/>
+  <circle cx="750" cy="160" r="185" fill="url(#halo)"/>
+  <g fill="#b7b5ae" opacity=".5">
+    <circle cx="48" cy="51" r="1"/><circle cx="420" cy="36" r="1"/><circle cx="550" cy="86" r="1"/>
+    <circle cx="612" cy="245" r="1"/><circle cx="870" cy="48" r="1"/><circle cx="916" cy="251" r="1"/>
+    <circle cx="392" cy="276" r="1"/><circle cx="495" cy="192" r="1"/><circle cx="580" cy="302" r="1"/>
+    <circle cx="720" cy="36" r="1"/><circle cx="840" cy="290" r="1"/><circle cx="91" cy="281" r="1"/>
+  </g>
+  <g transform="translate(52 0)">
+    <text x="0" y="69" fill="#d9b77e" font-family="monospace" font-size="10" letter-spacing="4">AN INTERACTIVE COSMIC JOURNEY</text>
+    <text x="-3" y="170" fill="#edebe5" font-family="Georgia,serif" font-size="82" letter-spacing="9">ASTRA</text>
+    <path d="M0 198H320" stroke="#d9b77e" stroke-opacity=".45"/>
+    <text x="0" y="230" fill="#b7b5ae" font-family="Georgia,serif" font-size="21">Your Journey Through the Cosmos</text>
+    <text x="0" y="271" fill="#7b7a78" font-family="monospace" font-size="9" letter-spacing="2">ONE WORLD · ONE CAMERA · YOUR STORY</text>
+  </g>
+  <g fill="none" stroke="#d9b77e" stroke-opacity=".3">
+    <circle cx="750" cy="160" r="66"/><circle cx="750" cy="160" r="108"/><circle cx="750" cy="160" r="140" stroke-dasharray="2 8"/>
+  </g>
+  <g class="orbit"><circle cx="858" cy="160" r="4" fill="#9fd3de"/><circle cx="642" cy="160" r="2" fill="#d9b77e"/></g>
+  <g class="orbit reverse"><circle cx="750" cy="94" r="3" fill="#edebe5"/></g>
+  <circle class="pulse" cx="750" cy="160" r="22" fill="url(#halo)"/>
+  <circle cx="750" cy="160" r="10" fill="url(#sun)"/>
+  <path d="M750 137V146M750 174V183M727 160H736M764 160H773" stroke="#d9b77e" stroke-opacity=".55"/>
+</svg>
